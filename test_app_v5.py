@@ -1,6 +1,5 @@
 import altair as alt
 import streamlit as st
-from vega_datasets import data
 import numpy as np
 import scipy as sp
 import pandas as pd
