@@ -7,9 +7,9 @@ import pandas as pd
 st.set_page_config(layout="wide")
 
 st.title('統計ダッシュボード')
-uploaded_file = st.file_uploader("エクセルファイルのアップロード", type="xlsx")
+uploaded_file = st.file_uploader("CSVファイルのアップロード", type="csv")
 if uploaded_file is not None:
-    df = pd.read_excel(uploaded_file, index_col=0)
+    df = pd.read_csv(uploaded_file, index_col=0)
     # 定量データ項目のリスト
     item_list = [col for col in df.columns if df[col].dtype in ['float64', 'int64']]
     
